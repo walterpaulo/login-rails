@@ -4,8 +4,6 @@ class LoginController < ApplicationController
 
 
   def logar
-     debugger
-      x = ''
     user = Administrator.where(email: params["login"]["email"], password: params["login"]["password"])
     if user.present?
       time = params["login"]["lembrar"] == "1" ? 1.year.from_now : 30.minutes.from_now
