@@ -1,25 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Login</title>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<body>
-<form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">.</div>
+<div class="box-login">
+  <div class="error-default">
+    <%= form_for("login") do |f| %>
+    <% if flash[:erro].present? %>
+    <%= flash[:erro] %>
+    <% end %>
   </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+  <div class="form-component">
+    <%= f.label :email, 'Email', class: "col-sm-2 control-label" %>
+    <div class="form-input">
+      <%= f.text_field :email, class: "form-control" %><br>
+    </div>
   </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" value="1" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  <div class="form-component">
+    <%= f.label :password, 'Senha', class: "col-sm-2 control-label" %>
+    <div class="form-input">
+      <%= f.password_field :password, class: "form-control" %><br>
+    </div>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>	
-</body>
-</html>
+  <div class="form-component">
+    <input type="checkbox" value="1" checked="checked" name="login[lembrar]" id="login_lembrar">
+    <%= f.label :lembrar, 'Deixe me logado', class: "col-sm-2 control-label" %>
+  </div>
+  <div class="form-btn">
+    <%= f.submit 'Logar', class: "btn-default" %>
+  </div>
+  <% end %>	
+</div>

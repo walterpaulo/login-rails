@@ -1,14 +1,28 @@
-<p style="color: green"><%= notice %></p>
+<div class="box-content">
 
-<h1>Administrators</h1>
-
-<div id="administrators">
-  <% @administrators.each do |administrator| %>
+  <p style="color: green"><%= notice %></p>
+  
+  <div class="box-controller">
+    <div class="box-controller-title">
+      <h1>Administrador</h1>
+    </div>
+    <div>
+      <%= link_to "Novo", new_administrator_path, class: "btn-default" %>
+      <%= link_to "Sair", logout_path, class: "btn-default" %>
+    </div>
+  </div>
+    
+  <div class="table-administrator">
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Senha</th>
+        <th>Ações</th>
+      </tr>
+    <% @administrators.each do |administrator| %>
     <%= render administrator %>
-    <p>
-      <%= link_to "Show this administrator", administrator %>
-    </p>
-  <% end %>
+    <% end %>
+  </table>
+  </div>
 </div>
-
-<%= link_to "New administrator", new_administrator_path %>

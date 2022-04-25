@@ -1,17 +1,8 @@
 <div id="<%= dom_id administrator %>">
-  <p>
-    <strong>Name:</strong>
-    <%= administrator.name %>
-  </p>
-
-  <p>
-    <strong>Email:</strong>
-    <%= administrator.email %>
-  </p>
-
-  <p>
-    <strong>Password:</strong>
-    <%= administrator.password %>
-  </p>
-
+  <tr>
+    <td><%= administrator.name %></td>
+    <td><%= administrator.email %></td>
+    <td> <%= administrator.password %></td>
+    <td><%= link_to "Detalhes", administrator, class: "btn-default" %></td>
+  </tr>
 </div>

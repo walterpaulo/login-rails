@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   resources :administrators
+  root "administrators#index" 
 
-  root to: "administrators#index"
-
-  get '/login', to: 'adminstrator#index'
-  post '/login', to: 'adminstrator#logar'
-  get '/logout', to: 'adminstrator#logout'
+  get '/login', to: 'login#index'
+  post '/login', to: 'login#logar'
+  get '/logout', to: 'login#logout'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
