@@ -139,13 +139,14 @@ body{
   }
 
   .box-content-modal{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     background-color: #fff;
     width: 100%;
     border-radius: 10px;
     box-shadow: 0px 1px 5px 2px #cccc;
     font-size: 20px;
     font-weight: 300;
+    padding-top: 5px;
   }
