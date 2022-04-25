@@ -13,3 +13,80 @@
  *= require_tree .
  *= require_self
  */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: blueviolet;
+
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #c4c4c4;
+}
+
+.box-login{
+    margin-top: 10vh;
+    background-color: #fff;
+    width: 300px;
+    height: 315px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 2px #cccc;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px
+ }
+
+.form-component{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.box-login .form-input input{
+    width: 260px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-style: none;
+    border: 1px solid #cccc;
+    margin-top: 10px;
+    
+}
+
+.btn-default{
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-style: none;
+    border-radius: 2px;
+    border: 1px solid #cccc;
+    cursor: pointer;
+    margin:10px;
+    text-align: center;
+    line-height: 36px;
+    height: 36px;
+}
+
+.form-btn{
+   text-align: right;
+}
+
+.error-default{
+    color: red;
+    font-weight: 300;
+    margin-left: 10px;
+    height: 20px;
+
+}

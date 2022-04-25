@@ -1,25 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Login</title>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<body>
-  <%= form_for("login") do |f| %>
-  <% if flash[:erro].present? %>
+<div class="box-login">
+  <div class="error-default">
+    <%= form_for("login") do |f| %>
+    <% if flash[:erro].present? %>
     <%= flash[:erro] %>
-  <% end %>
-<br>
-  <%= f.label :email, 'Email', class: "col-sm-2 control-label" %><br>
-  <%= f.text_field :email, class: "form-control" %><br>
-
-  <%= f.label :password, 'Senha', class: "col-sm-2 control-label" %><br>
-  <%= f.password_field :password, class: "form-control" %><br>
-
-  <%= f.label :lembrar, 'Deixe me logado', class: "col-sm-2 control-label" %><br>
-  <input type="checkbox" value="1" checked="checked" name="login[lembrar]" id="login_lembrar">
-
-  <%= f.submit 'Logar', class: "btn btn-primary" %>
-<% end %>	
-</body>
-</html>
+    <% end %>
+  </div>
+  <div class="form-component">
+    <%= f.label :email, 'Email', class: "col-sm-2 control-label" %>
+    <div class="form-input">
+      <%= f.text_field :email, class: "form-control" %><br>
+    </div>
+  </div>
+  <div class="form-component">
+    <%= f.label :password, 'Senha', class: "col-sm-2 control-label" %>
+    <div class="form-input">
+      <%= f.password_field :password, class: "form-control" %><br>
+    </div>
+  </div>
+  <div class="form-component">
+    <input type="checkbox" value="1" checked="checked" name="login[lembrar]" id="login_lembrar">
+    <%= f.label :lembrar, 'Deixe me logado', class: "col-sm-2 control-label" %>
+  </div>
+  <div class="form-btn">
+    <%= f.submit 'Logar', class: "btn-default" %>
+  </div>
+  <% end %>	
+</div>
