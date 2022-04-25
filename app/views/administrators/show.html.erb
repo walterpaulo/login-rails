@@ -1,10 +1,21 @@
-<p style="color: green"><%= notice %></p>
+<div class="box-content">
+  <div class="box-controller">
+    <div class="box-controller-title">
+      <h1><%= @administrator.name %></h1>
+    </div>
+    <div>
+      <%= link_to "home", administrators_path, class: "btn-default" %>
+      <%= link_to "Sair", logout_path, class: "btn-default" %>
+    </div>
+  </div>
 
-<%= render @administrator %>
-
-<div>
-  <%= link_to "Edit this administrator", edit_administrator_path(@administrator) %> |
-  <%= link_to "Back to administrators", administrators_path %>
-
-  <%= button_to "Destroy this administrator", @administrator, method: :delete %>
+  <p style="color: green"><%= notice %></p>
+  <div>
+    <%= @administrator.email %> <br>
+    <%= @administrator.password %>
+    <div class="box-link">
+      <%= button_to "Editar", edit_administrator_path(@administrator),method: :get, class: "btn-default" %>
+      <%= button_to "Excluir", @administrator, method: :delete, class: "btn-default" %>
+    </div>
+  </div>
 </div>
