@@ -22,4 +22,8 @@ class LoginController < ApplicationController
     end
   end
 
+  def logout
+    cookies[:home_adm] = nil
+    redirect_to login_path
+  end
 end
