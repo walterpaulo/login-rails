@@ -1,9 +1,14 @@
-<h1>New administrator</h1>
+<div class="box-content">
+  <div class="box-controller">
+    <div class="box-controller-title">
+      <h1>Novo</h1>
+    </div>
+    <div>
+      <%= link_to "home", administrators_path, class: "btn-default" %>
+      <%= link_to "Sair", logout_path, class: "btn-default" %>
+    </div>
+  </div>  
 
-<%= render "form", administrator: @administrator %>
+  <%= render "form", administrator: @administrator %>
 
-<br>
-
-<div>
-  <%= link_to "Back to administrators", administrators_path %>
 </div>
